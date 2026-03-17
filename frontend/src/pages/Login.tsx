@@ -38,7 +38,6 @@ function Login() {
         navigate("/login", { replace: true });
       }
     } catch (error: any) {
-      console.error("Login error:", error);
       setErrorMessage(
         error?.response?.data?.detail || "Login failed. Please try again."
       );
@@ -105,7 +104,10 @@ function Login() {
 
         <p className="text-sm text-gray-600 mt-6 text-center">
           Don’t have an account?{" "}
-          <Link to="/signup" className="text-red-700 font-semibold hover:underline">
+          <Link
+            to="/signup"
+            className="text-red-700 font-semibold hover:underline"
+          >
             Sign Up
           </Link>
         </p>
