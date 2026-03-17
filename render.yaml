@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jeevasetu-frontend
+    runtime: static
+    repo: https://github.com/Kavya-art-cmd/JeevaSetu
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://jeevasetu-backend.onrender.com
