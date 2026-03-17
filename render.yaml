@@ -1,11 +1,22 @@
 services:
+  # 🔹 Backend Service
   - type: web
+    name: jeevasetu-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    plan: free
+
+  # 🔹 Frontend Service (React)
+  - type: static
     name: jeevasetu-frontend
-    runtime: static
-    repo: https://github.com/Kavya-art-cmd/JeevaSetu
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://jeevasetu-backend.onrender.com
+    publishDir: dist
+
+    # 🔥 IMPORTANT: Fix React routing (your issue)
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
