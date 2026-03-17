@@ -1,0 +1,6 @@
+{
+  "last_trained_at_utc": "2026-03-15T06:25:15.917140+00:00",
+  "last_seen_allocation_id": 13,
+  "min_new_allocations_to_retrain": 10,
+  "max_hours_without_retrain": 24.0
+}

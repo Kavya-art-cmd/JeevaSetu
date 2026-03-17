@@ -1,0 +1,32 @@
+{
+  "trained_at_utc": "2026-03-15T06:25:13.787146+00:00",
+  "latest_allocation_id": 13,
+  "models_dir": "C:\\Users\\navya\\OneDrive\\Desktop\\JeevaSetu\\backend\\ml_model\\models",
+  "series_trained": 2,
+  "series_skipped": 0,
+  "total_rows": 792,
+  "avg_mae": 0.1583,
+  "avg_mape_percent": 1.5367,
+  "series_metrics": [
+    {
+      "blood_group": "O+",
+      "patient_city": "Hyderabad",
+      "model_file": "O+__Hyderabad.pkl",
+      "rows_total": 427,
+      "rows_train": 341,
+      "rows_test": 86,
+      "mae": 0.3029,
+      "mape_percent": 2.9489
+    },
+    {
+      "blood_group": "O+",
+      "patient_city": "Mumbai",
+      "model_file": "O+__Mumbai.pkl",
+      "rows_total": 365,
+      "rows_train": 292,
+      "rows_test": 73,
+      "mae": 0.0137,
+      "mape_percent": 0.1245
+    }
+  ]
+}
