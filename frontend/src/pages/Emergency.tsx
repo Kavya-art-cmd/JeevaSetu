@@ -74,24 +74,6 @@ type VoiceResponseData = {
   };
 };
 
-type AllocationHistoryRecord = {
-  id: number;
-  donor_id?: number;
-  donor_name?: string | null;
-  donor_phone?: string | null;
-  donor_email?: string | null;
-  donor_city?: string | null;
-  donor_state?: string | null;
-  blood_group: string;
-  patient_city: string;
-  patient_state: string;
-  readiness_score: number;
-  priority_score: number;
-  allocated_at: string;
-  completed_at?: string | null;
-  status: string;
-};
-
 function Emergency() {
   const [formData, setFormData] = useState<EmergencyFormData>({
     blood_group: "",
